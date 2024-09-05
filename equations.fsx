@@ -1,17 +1,13 @@
 let eps = 1e-10
 
 let rec dichotomy f a b =
-    let fa = f a
-    let fb = f b
-    let rec loop a b fa fb =
-        let c = (a + b) / 2.
-        let fc = f c
-        if abs(fc) < eps then c
-        elif fa * fc < 0. then
-            loop a c fa fc
-        else                    
-            loop c b fc fb
-    loop a b fa fb 
+    let c = (a + b) / 2.0 in
+    if abs(f c) < eps then c
+    else if f a * f c < 0.0 then
+        dichotomy f a c
+    else
+        dichotomy f c b
+
 
 let rec iterations f phi x =
     let x1 = phi x
