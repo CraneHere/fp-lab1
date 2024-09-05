@@ -8,7 +8,6 @@ let rec dichotomy f a b =
     else
         dichotomy f c b
 
-
 let rec iterations f phi x =
     let x1 = phi x
     if abs(x1 - x) < eps then x1
