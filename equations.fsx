@@ -36,7 +36,7 @@ let phi2 x = x - f2 x / f2' x
 let phi3 x = x - f3 x / f3' x
 
 let main =
-    printfn " | %10.5f | %10.5f | %10.5f|" (dichotomy f1 1. 3.) (iterations f1 phi1 1.0) (newton f1 f1' 2.5)
+    printfn " |%10.5f  | %10.5f | %10.5f|" (dichotomy f1 1. 3.) (iterations f1 phi1 1.0) (newton f1 f1' 2.5)
     printfn " |%10.5f  | %10.5f | %10.5f|" (dichotomy f2 2. 3.) (iterations f2 phi2 2.5) (newton f2 f2' 2.5)
     printfn " |%10.5f  | %10.5f | %10.5f|" (dichotomy f3 2. 3.) (iterations f3 phi3 2.0) (newton f3 f3' 2.5)
 
